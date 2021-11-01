@@ -8,19 +8,28 @@ import { CommonService } from '../common.service';
   styleUrls: ['./add-resturant.component.css']
 })
 export class AddResturantComponent implements OnInit {
- 
-  constructor(private resto:CommonService) { }
+  alert:boolean = false;
   addRestaurant= new FormGroup({
     name: new FormControl(''),
     Address: new FormControl(''),
+    mobile: new FormControl(''),
     email: new FormControl('')
-
   })
+  constructor(private resto:CommonService) { }
   ngOnInit(): void {
   }
 
   createResto(){
-    console.log(this.addRestaurant.value);
+    // console.log(this.addRestaurant.value);
+    this.resto.addResto(this.addRestaurant.value).subscribe((result)=>{
+      this.alert=true;
+      this.addRestaurant.reset({});
+      console.log("Get Data From Service", result)
+    })
+  }
+
+  closeAlert(){
+    this.alert = false;
   }
 
 }

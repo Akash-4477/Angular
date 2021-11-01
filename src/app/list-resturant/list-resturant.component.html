@@ -1,18 +1,20 @@
 <table class="table">
     <thead>
       <tr>
-        <th scope="col">USERID</th>
         <th scope="col">ID</th>
-        <th scope="col">Employee Title</th>
-        <th scope="col">Employee Body</th>
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Email Address</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let emp of collection">
-        <td>{{emp.userId}}</td>
-        <td>{{emp.id}}</td>
-        <td>{{emp.title}}</td>
-        <td>{{emp.body}}</td>
+      <tr *ngFor="let resto of collection">
+        <td>{{resto.id}}</td>
+        <td>{{resto.name}}</td>
+        <td>{{resto.Address}}</td>
+        <td>{{resto.mobile}}</td>
+        <td>{{resto.email}}</td>
       </tr>
     </tbody>
   </table>

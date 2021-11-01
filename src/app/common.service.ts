@@ -5,9 +5,13 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CommonService {
-  URL="https://jsonplaceholder.typicode.com/posts"
+  URL="http://localhost:3000/resto"
   constructor(private _http:HttpClient) { }
   getRestoList(){
     return this._http.get(this.URL);
+  }
+
+  addResto(data: any){
+    return this._http.post(this.URL, data);
   }
 }
