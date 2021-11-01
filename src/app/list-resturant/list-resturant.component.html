@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">USERID</th>
+        <th scope="col">ID</th>
+        <th scope="col">Employee Title</th>
+        <th scope="col">Employee Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of collection">
+        <td>{{emp.userId}}</td>
+        <td>{{emp.id}}</td>
+        <td>{{emp.title}}</td>
+        <td>{{emp.body}}</td>
+      </tr>
+    </tbody>
+  </table>

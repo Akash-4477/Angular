@@ -1,0 +1,19 @@
+<div class="jumborton">
+    <h1>Add Resturant</h1>
+</div>
+
+<form [formGroup]="addRestaurant" (ngSubmit)= "createResto">
+    <div class="mb-3 form-group">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control" placeholder="Enter Name" formControlName="name">
+    </div>
+    <div class="mb-3 form-group">
+        <label class="form-label">Address</label>
+        <input type="text" class="form-control" placeholder="Enter Address" formControlName="Address">
+      </div>
+      <div class="mb-3 form-group">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" placeholder="Enter Email" formControlName="email">
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button> 
+  </form>
